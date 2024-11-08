@@ -1,0 +1,674 @@
+@import url('http://fonts.cdnfonts.com/css/fakt-pro');
+@import url('http://fonts.cdnfonts.com/css/retro-signature');
+
+/*Inicio Aniversário*/
+
+.alerta { 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    filter: opacity(90%);
+}
+
+.mensagem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    height: 50%;
+    color: white;
+    margin: 10px;
+}
+
+.mensagem h3, .mensagem h4 {
+    z-index: 1;
+    font-size: 2rem;
+}
+
+.mensagem #aniver {
+    position: absolute;
+    z-index: 0;
+    box-shadow:
+    3.4px 3.4px 2.7px rgba(0, 0, 0, 0.033),
+    8.6px 8.7px 6.9px rgba(0, 0, 0, 0.047),
+    17.5px 17.7px 14.2px rgba(0, 0, 0, 0.057),
+    36.1px 36.5px 29.2px rgba(0, 0, 0, 0.07),
+    99px 100px 80px rgba(0, 0, 0, 0.1)
+    ;
+}
+
+.mensagem #exit {
+    z-index: 100;
+    cursor: pointer;
+    position: relative;
+    width: 3vw;
+    margin: 10px 0 5% 0;
+    left: 33%;
+    transition: .8s ease;
+}
+
+.mensagem h3, .mensagem h4 {
+    text-align: center;
+}
+
+.mensagem #exit:hover {
+    transform: scaleX(103%);
+}
+
+/*Fim Aniversário*/
+
+body{
+    background-color:  rgba(220, 220, 220);
+    margin: 0;
+}
+
+html.-is-locked {
+    overflow: hidden !important;
+}
+
+header {
+    min-height: 627px;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(10,10,10, .4), rgba(10,10,10, .4)), url('../assets/bg_test.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    font-family: 'Fakt Pro', sans-serif;
+    scroll-behavior: smooth !important;
+}
+
+.shortcuts {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    justify-content: end;
+    flex-direction: row;
+    position: fixed;
+    z-index: 10;
+}
+
+.shortcuts a {
+    color: rgba(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(.55rem, 1.2vw, 2.5rem);
+    line-height: 25px;
+    padding: 12px;
+    background-color: #231F20;
+    width: 25%;
+}
+
+.shortcuts .btn:hover {
+    background-color:  rgba(55, 51, 52);
+    transform: scale(110%);
+    transition: all .5s ease;
+}
+
+.content_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content_header span {
+    padding-top: 40px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    font-family: 'Retro Signature', sans-serif;
+    font-size: clamp(.75rem, 15vw, 10rem);
+    color: rgba(255, 255, 255);
+    display: inline-block;
+    text-shadow: 2px 2px rgba(0, 0, 0);
+    width: 100%;
+}
+
+.img {
+    background-color: black;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 300px;
+}
+
+.video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5%;
+}
+
+#section_a, #section_b, #section_c, #section_d, #section_e {
+    max-height: 100vh;
+    background-color: rgba(220, 220, 220);
+    line-height: 25px;
+    padding: 50px 80px;
+    font-size: clamp(.75rem, 1rem, 2.5rem);
+    color: rgba(0, 0, 0);
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#section_a a {
+    color: rgba(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 15px;
+    padding: 12px;
+    width: 25%;
+    left: 35%;
+    background-color:  #231F20; 
+    display: inline-block;
+    position: relative;
+}
+
+#section_a a:hover {
+    background-color:  rgba(55, 51, 52);
+}
+
+#section_b {
+    background-image: linear-gradient(to top, rgba(85,58,155, .4), rgba(6,159,207, .4)), url(../assets/bg_music.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 20px;
+    height: 50vh !important;
+}
+
+#section_b h3, #section_c h3 {
+    margin-block-start: .025em;
+}
+
+#section_c h3 {
+    position: relative;
+    top: 10px;
+}
+
+#section_e {
+    height: 75vh;
+    background-color: rgba(10,10,10);
+    color: rgba(255, 255, 255);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-image: url('../assets/bg_test2.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section_e a {
+    color: rgba(255, 255, 255);
+}
+
+.msg, .contact, .links, .name, .comment {
+    display: flex;
+    position: relative;
+    width: 50%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.links {
+    height: 60%;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.links a, .msg a {
+    text-align: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0);
+}
+
+.msg {
+    float: left;
+}
+
+.contact {
+    float: right;
+    height: 50vh;
+}
+
+.socialMedia {
+    width: clamp(1rem, 2vw, 4rem);
+    height: clamp(1rem, 2vw, 4rem);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.name {
+    width: 99%;
+}
+
+.comment {
+    width: 100%;
+}
+
+.name p, .comment p {
+    width: 71%;
+    font-size: clamp(1rem, 1vw, 4rem);
+    margin-block-end: .075em;
+}
+
+.inputArea {
+    height: 100px;
+    width: 70%;
+    resize: none;
+}
+
+.inputControl {
+    width: 70%;
+}
+
+.inputButton {
+    width: 70%;
+}
+
+#img_a {
+    background-image: url('../assets/images.jpg');
+    opacity: .6;
+}
+
+#img_b {
+    background-image: url('../assets/bateira.jpg');
+    opacity: .6;
+}
+
+#img_c {
+    background-image: url('../assets/tons.jpg');
+    opacity: .6;
+}
+
+#img_d {
+    background-image: url('../assets/pratos.jpg');
+    opacity: .6;
+}
+
+#logo {
+    width: 50px; 
+    height: 50px; 
+    bottom: 11px; 
+    position: relative;
+}
+
+#anchorAbout, #anchorPhotos, #anchorMusic, #anchorVideos {
+    opacity: 0;
+    position: relative;
+}
+
+#anchorAbout {
+    bottom: 8vh;
+}
+
+#anchorMusic { 
+    top: 20vh;
+}
+
+#anchorPhotos {
+    top: 56vh;
+}
+
+#anchorVideos {
+    top: 45vh;
+}
+
+.slider {
+    margin: 0;
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.image {
+    position: relative;
+    width: 93%;
+    border: 1px solid black;
+    left: 3.3%;
+}
+
+.image img {
+    position: relative;
+    width: 100%;
+    display: none;
+}
+
+#section_c p {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.ativo {
+    display: block !important;
+}
+
+.buttonImgs {
+    width: 80%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 95%;
+}
+
+.buttonImgs button:nth-child(1) {
+    background-color: rgba(75, 71, 72);
+}
+
+.buttonImgs button {
+    outline: none;
+    cursor: pointer;
+    height: 15px;
+    width: 1px;
+    border-radius: 50%;
+    border: 2px solid #231F20;
+}
+
+#prevImg, #nextImg {
+    padding: 0 30px;
+}
+
+#created {
+    color: white;
+    font-size: clamp(.75rem, 1vw, 2rem);
+    text-decoration: none;
+}
+
+.desenvolvedor {
+    background-color: #231F20;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+#introVideo {
+    width: 100vw;
+    height: auto;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 100;
+}
+
+/* Audio CSS */
+
+.mainB {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.player {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 25%;
+}
+
+.infoMusic {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 80%;
+}
+
+.music {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 100%;
+    height: auto;
+}
+
+.music p {
+    color: white;
+}
+
+.musicContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infoCd #cds {
+    position: relative;
+    width: 200px;
+    height: auto;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, .2);
+}
+
+.infoMusic .music #msc {
+    position: relative;
+    width: 50%;
+    height: 40px;
+    outline: none;
+    background-color: rgba(255, 255, 255);
+}
+
+.infoMusic a {
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+}
+
+#section_d {
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#section_d a {
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.imgs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5%;
+}
+
+#section_c .player {
+    gap: 0;
+}
+
+.imgs #photos {
+    width: 80%;
+    height: auto;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: rgba(255, 255, 255);
+}
+
+#prev, #next, #prevImg, #nextImg, #prevVideo, #nextVideo {
+    position: relative;
+    width: 3vw;
+    height: 3vw;
+}
+
+#prev:hover, #next:hover, #prevImg:hover, #nextImg:hover, #prevVideo:hover, #nextVideo:hover {
+    transition: all .5s ease;
+    transform: scale(105%);
+}
+
+/* Para Celular*/
+@media only screen and (max-width: 768px) {
+    
+    /*Inicio Aniversário*/
+
+    .mensagem #aniver {
+        width: 90% !important;
+    }
+
+    .mensagem {
+        height: 24%;
+    }
+
+    .mensagem #exit {
+        margin: 10px 0 5% 0;
+        left: 54%;
+    }
+
+    .mensagem h3, .mensagem h4 {
+        z-index: 1;
+        font-size: 1rem;
+    }
+    
+    /*Fim Aniversário*/
+
+    .shortcuts {
+        width: 100vw;
+        justify-content: start;
+    }
+
+    .shortcuts a {
+        width: 20%;
+        padding: 6px;
+    }
+
+    .musicContent {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #introVideo {
+        width: 100vw;
+        height: auto;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .infoCd #cds {
+        width: 130px;
+    }
+
+    .infoMusic audio {
+        width: 100% !important;
+    }
+
+    .infoMusic {
+        width: 95%;
+    }
+
+    .infoCd {
+        width: 40%;
+    }
+
+    .player {
+        gap: 25%;
+    }
+
+    #section_a, #section_d, #section_e {
+        padding: 50px 25px;
+    }
+
+    #section_c {
+        line-height: 15px;
+    }
+
+    #section_b, #section_c {
+        padding: 50px 10px;
+    }
+
+    #section_c, #section_d {
+        height: auto;
+    }
+
+    .content_header img {
+        padding-bottom: 10%;
+        width: 100%;
+        height: auto;
+    }
+
+    #video {
+        height: 300px;
+    }
+
+    #logo {
+        width: 35px;
+        height: 35px;
+        padding-top: 5px;
+    }
+
+    .buttonImgs {
+        display: none;
+    }
+
+    #prevImg, #nextImg {
+        padding: 0 5px;
+    }
+
+    #anchorMusic { 
+        top: 15vh;
+    }
+
+    #anchorPhotos {
+        top: 5vh;
+    }
+
+    #anchorVideos {
+        top: 15vh;
+    }
+}
