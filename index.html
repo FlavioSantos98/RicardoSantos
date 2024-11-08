@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="assets/icons/icone_branco.png">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="preload" href="css/main.css" as="style">
+    <title>Ricardo Santos</title>
+</head>
+<body>
+    <!-- Inicio Aniversário -->
+    <div class="alerta" id="alt">
+        <div class="mensagem">
+            <img src="assets/exit.png" id="exit">
+            <img src="assets/aniversario.png" id="aniver" style="width: 55%; height: auto;">
+            <h3>Hoje é aniversário do Ricardo Santos!</h3>
+            <h4>Mande sua mensagem!</h4>
+        </div>
+    </div>
+    <!-- Fim Aniversário -->
+    
+    <!-- Header do Site -->
+    <header id="head">
+        <div class="shortcuts">
+            <a style="width: 5%; height: 25px;"><img id="logo" src="assets/icons/icone_branco.png"></a>
+            <a href="#head" class="btn">Home</a>
+            <a href="#anchorAbout" class="btn">Memórias</a>
+            <a href="#anchorMusic" class="btn">Músicas</a>
+            <a href="#anchorPhotos" class="btn">Fotos</a>
+            <a href="#anchorVideos" class="btn">Vídeos</a>
+            <a href="#section_e" class="btn">Contato</a>
+        </div>
+        <div class="content_header">
+            <span>Ricardo Santos</span> 
+        </div>
+    </header>
+    <main class="main">
+        <!-- Seções do site omitidas para brevidade -->
+        
+        <!-- Aba de Mensagens / Contato -->
+        <section id="section_e">
+            <div class="msg">
+                <form id="messageForm" class="form">
+                    <h3 style="text-align: center;">Mande sua mensagem</h3>
+                    <div class="name">
+                        <p>Nome:</p>
+                        <input type="text" id="name" placeholder="Digite seu nome!" class="inputControl" required>
+                    </div>
+                    <div class="comment">
+                        <p>Mensagem:</p>
+                        <textarea id="comment" class="inputArea" placeholder="Deixe seu comentário aqui!" maxlength="150" required></textarea>
+                    </div></br>
+                    <button type="submit" class="inputButton">Enviar</button></br>
+                    <a href="pages/messages.php" alt="Mensagens" >Ver todas as mensagens</a>
+                </form>
+            </div>
+            <div class="contact">
+                <h3 style="text-align: center">Contato</h3>
+                <div class="links">
+                    <a href="https://www.instagram.com/joaoricardosilveira76/" alt="Instagram" title="Ir para o Instagram" target="_blank"><img src="assets/icons/instagram.png" class="socialMedia">Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=100014565941745" alt="Facebook" title="Ir para o Facebook" target="_blank"><img src="assets/icons/facebook.png" class="socialMedia">Facebook</a>
+                    <a href="https://www.youtube.com/channel/UC0SFpWux1oqoTlrzYgmnZSg" alt="YouTube" title="Ir para o YouTube" target="_blank"><img src="assets/icons/youtube.png" class="socialMedia">YouTube</a>
+                </div>
+            </div>  
+        </section>
+        <div class="desenvolvedor">
+            <a href="https://www.linkedin.com/in/flávio-santos-196a5a1a1/" target="_blank" id="created">Desenvolvido por: Flávio Santos</a>  
+        </div>
+    </main>
+</body>
+<script src="js/script.js" defer></script>
+<script>
+    document.getElementById('messageForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById('name').value;
+        const mensagem = document.getElementById('comment').value;
+        const data_dia = new Date().toLocaleDateString('pt-BR');
+
+        let mensagens = JSON.parse(localStorage.getItem('mensagens')) || [];
+        mensagens.push({ nome, mensagem, data_dia });
+        localStorage.setItem('mensagens', JSON.stringify(mensagens));
+
+        document.getElementById('messageForm').reset();
+        alert("Mensagem enviada com sucesso!");
+    });
+
+    function exibirMensagens() {
+        const mensagens = JSON.parse(localStorage.getItem('mensagens')) || [];
+        mensagens.forEach(msg => {
+            console.log(`Nome: ${msg.nome}, Mensagem: ${msg.mensagem}, Data: ${msg.data_dia}`);
+        });
+    }
+
+    window.onload = exibirMensagens;
+</script>
+</html>
